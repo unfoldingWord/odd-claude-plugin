@@ -20,39 +20,53 @@ Outcomes-Driven Development is a governance framework that prioritizes real-worl
 
 ## Installation
 
+### Prerequisites
+
+- Claude Code version **1.0.33 or later**
+
 ### From GitHub
 
-\`\`\`bash
-# Add the marketplace
+```bash
+# Step 1: Add the marketplace
 /plugin marketplace add unfoldingWord/odd-claude-plugin
 
-# Install the plugin
-/plugin install odd@unfoldingWord
-\`\`\`
+# Step 2: Install the plugin
+/plugin install odd-claude-plugin@unfoldingWord
+```
+
+For project-wide installation (shared with collaborators via `.claude/settings.json`):
+
+```bash
+/plugin install odd-claude-plugin@unfoldingWord --scope project
+```
 
 ### Local Development
 
-\`\`\`bash
+```bash
 # Clone the repo
 git clone https://github.com/unfoldingWord/odd-claude-plugin.git
 
 # Add as local marketplace
 /plugin marketplace add ./odd-claude-plugin
 
-# Install
-/plugin install odd
-\`\`\`
+# Install (use the plugin name from plugin.json)
+/plugin install odd@odd-claude-plugin
+```
+
+### Verify Installation
+
+Run `/plugin` and check the "Installed" tab to confirm the plugin is active.
 
 ## Available Commands
 
-### \`/odd-init\`
+### `/odd-init`
 Initialize ODD governance in your project. Provides guidance on:
 - The ODD framework and 7 pillars
 - Project maturity levels (PoC → Pilot → Production)
 - Recommended folder structure
 - Next steps
 
-### \`/self-audit\`
+### `/self-audit`
 Run through the 9-area self-audit checklist before declaring work complete:
 1. Intended Outcome
 2. Constraints Applied
@@ -64,7 +78,7 @@ Run through the 9-area self-audit checklist before declaring work complete:
 8. Maintainability Check
 9. Confidence Level
 
-### \`/dod\`
+### `/dod`
 Check if work meets the ODD Definition of Done requirements:
 1. Change Description - What changed, where, and why
 2. Verification Performed - What was run or checked
@@ -72,7 +86,7 @@ Check if work meets the ODD Definition of Done requirements:
 4. Evidence Produced - Proof of behavior
 5. Self-Audit Completed - Reflection against constraints
 
-### \`/create-prd\`
+### `/create-prd`
 Interactive PRD (Product Requirements Document) creation through 7 stages:
 1. Outcome Discovery
 2. Success Criteria
@@ -82,7 +96,7 @@ Interactive PRD (Product Requirements Document) creation through 7 stages:
 6. Risks and Tradeoffs
 7. Draft Assembly
 
-### \`/constraints\`
+### `/constraints`
 Review and apply the 10 ODD constraints:
 1. Offline-First (Default)
 2. Long Timelines & Changing Ownership
@@ -95,7 +109,7 @@ Review and apply the 10 ODD constraints:
 9. Ephemeral Artifacts Are Acceptable
 10. Explicit Tradeoffs
 
-### \`/decision-rules\`
+### `/decision-rules`
 Get guidance from the 14 ODD decision heuristics when facing choices:
 - Outcomes Before Implementation
 - Borrow → Bend → Break → Build
@@ -106,7 +120,7 @@ Get guidance from the 14 ODD decision heuristics when facing choices:
 ## Agents
 
 ### PRD Guide Agent
-A dedicated agent for thorough, multi-turn PRD creation. More in-depth than the \`/create-prd\` command, with:
+A dedicated agent for thorough, multi-turn PRD creation. More in-depth than the `/create-prd` command, with:
 - Probing questions at each stage
 - Push-back on vague or untestable statements
 - Comprehensive PRD assembly
@@ -134,7 +148,7 @@ ODD applies different levels of rigor based on project maturity:
 
 ## Documentation
 
-Full ODD documentation is available in \`docs/prd-guide-pack.md\`, including:
+Full ODD documentation is available in `docs/prd-guide-pack.md`, including:
 - Complete constraints definitions
 - All 14 decision rules with examples
 - Definition of Done requirements
@@ -143,8 +157,8 @@ Full ODD documentation is available in \`docs/prd-guide-pack.md\`, including:
 
 ## Future Ideas
 
-See \`docs/future-ideas.md\` for planned enhancements including:
-- File creation in \`/odd-init\`
+See `docs/future-ideas.md` for planned enhancements including:
+- File creation in `/odd-init`
 - Evidence capture helpers
 - Maturity level tracking
 - Code review integration
