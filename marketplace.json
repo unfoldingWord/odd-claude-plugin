@@ -1,0 +1,10 @@
+{
+  "name": "odd-claude-plugin",
+  "description": "ODD governance framework plugin",
+  "plugins": [
+    {
+      "name": "odd",
+      "path": "."
+    }
+  ]
+}
