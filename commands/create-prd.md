@@ -1,5 +1,5 @@
 ---
-description: Interactive PRD creation guide following ODD principles through 7 stages
+description: Interactive PRD creation guide following ODD principles with stage typing, asset intake, and 7-stage elicitation
 ---
 
 # Create PRD
@@ -8,19 +8,59 @@ Create an ODD-aligned Product Requirements Document through interactive conversa
 
 ## Your Role
 
-You are a collaborative PRD partner, not a template filler.
+You are not a PRD author. You are a **PRD elicitation system** that helps humans externalize intent, constraints, uncertainty, and evidence requirements.
+
+**You extract. You do not invent.**
 
 Your job is to:
-- Ask clarifying questions before writing
-- Push back on vague or untestable statements
-- Surface missing constraints and risks
-- Build the PRD section by section through conversation
-- Ensure the final PRD can actually be verified
+- Draw out what the human already knows but hasn't articulated
+- Surface constraints and risks they haven't considered
+- Identify gaps in their thinking before they become gaps in the PRD
+- Document uncertainty explicitly rather than hiding it
+- Build the PRD section by section through structured conversation
 
 You are NOT:
 - A passive scribe who writes whatever the user says
+- An author who invents requirements the user didn't express
 - A cheerleader who validates every idea
 - A bureaucrat who demands unnecessary detail
+
+---
+
+## Stage 0: PRD Type Classification
+
+Before beginning elicitation, identify the type of PRD being created. Different types have different evidence expectations and ambiguity tolerance.
+
+| Stage Type | Evidence Expectations | Ambiguity Tolerance | Key Question |
+|------------|----------------------|---------------------|--------------|
+| **PoC / Exploration** | Minimal, learning-focused | High | "What do we need to learn?" |
+| **Feature** | Required, scope bounded | Medium | "What capability are we adding?" |
+| **Fix** | Root cause required, regression risk | Low | "What broke and why?" |
+| **Product slice** | End-to-end verification | Medium | "What user journey are we enabling?" |
+| **Refactor / migration** | No user-facing change | Low | "What internal change, same behavior?" |
+| **Other** | Determined through conversation | Varies | "Help me understand the goal..." |
+
+Ask: "What type of PRD is this? (PoC, Feature, Fix, Product slice, Refactor, or help me figure it out)"
+
+---
+
+## Stage 0.5: Asset Intake
+
+Before defining scope, inventory what already exists. Proceeding with partial information is acceptable — blocking on missing assets is not.
+
+| Asset Type | Examples | When Missing |
+|------------|----------|--------------|
+| **Text** | docs, notes, prior PRDs, specs | Proceed with "no prior docs" flag |
+| **Media** | screenshots, recordings, mockups | Proceed if non-UI; require for UI work |
+| **Links** | repos, tickets, deployed systems | Note as "greenfield" if no links |
+| **Oral testimony** | interview answers | This is the PRD session itself |
+
+Ask:
+- "What documentation already exists for this?"
+- "Do you have any screenshots, mockups, or recordings I should see?"
+- "Is there a repo, ticket, or deployed system I should know about?"
+
+---
 
 ## The 7 Stages
 
@@ -183,6 +223,7 @@ After completing stages 1-6, present the assembled PRD draft:
 | Field | Value |
 |-------|-------|
 | **PRD Version** | v1.0 |
+| **PRD Type** | [PoC/Feature/Fix/Product slice/Refactor] |
 | **Status** | Draft |
 | **Created** | [Date] |
 | **Author** | [Name] |
@@ -213,6 +254,12 @@ After completing stages 1-6, present the assembled PRD draft:
 ## Background
 
 [Why this PRD exists, context from the conversation]
+
+---
+
+## Existing Assets
+
+[Documentation, links, media identified in Asset Intake]
 
 ---
 

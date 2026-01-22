@@ -62,9 +62,10 @@ Run `/plugin` and check the "Installed" tab to confirm the plugin is active.
 ### `/odd-init`
 Initialize ODD governance in your project. Provides guidance on:
 - The ODD framework and 7 pillars
+- **Core terminology** (Outcome, Evidence, Artifact, Canon, Attempt, Lane)
+- **Document tiers** (Tier 0-3 epistemic obligation levels)
 - Project maturity levels (PoC → Pilot → Production)
 - Recommended folder structure
-- Next steps
 
 ### `/self-audit`
 Run through the 9-area self-audit checklist before declaring work complete:
@@ -87,14 +88,17 @@ Check if work meets the ODD Definition of Done requirements:
 5. Self-Audit Completed - Reflection against constraints
 
 ### `/create-prd`
-Interactive PRD (Product Requirements Document) creation through 7 stages:
-1. Outcome Discovery
-2. Success Criteria
-3. Non-Goals and Scope
-4. Constraints
-5. Definition of Done
-6. Risks and Tradeoffs
-7. Draft Assembly
+Interactive PRD (Product Requirements Document) creation with:
+- **PRD Type Classification** (PoC, Feature, Fix, Product slice, Refactor)
+- **Asset Intake** (inventory existing docs, media, links)
+- **7-Stage Elicitation**:
+  1. Outcome Discovery
+  2. Success Criteria
+  3. Non-Goals and Scope
+  4. Constraints
+  5. Definition of Done
+  6. Risks and Tradeoffs
+  7. Draft Assembly
 
 ### `/constraints`
 Review and apply the 10 ODD constraints:
@@ -120,7 +124,11 @@ Get guidance from the 14 ODD decision heuristics when facing choices:
 ## Agents
 
 ### PRD Guide Agent
-A dedicated agent for thorough, multi-turn PRD creation. More in-depth than the `/create-prd` command, with:
+A dedicated PRD elicitation agent for thorough, multi-turn PRD creation. Key principle: **"You extract. You do not invent."**
+
+Features:
+- PRD type classification and asset intake
+- Terminology precision enforcement
 - Probing questions at each stage
 - Push-back on vague or untestable statements
 - Comprehensive PRD assembly
@@ -146,9 +154,22 @@ ODD applies different levels of rigor based on project maturity:
 ### Memory Is the Bottleneck
 > In AI-accelerated development, durable intent is scarce—not computation.
 
+## Core Terminology
+
+ODD uses precise vocabulary:
+
+| Term | ODD Meaning | NOT |
+|------|-------------|-----|
+| **Outcome** | Verifiable state that can be demonstrated | Feature, artifact, checkbox |
+| **Evidence** | Observable proof (reproducible/recorded) | Confidence, assertion |
+| **Artifact** | Byproduct of work. Ephemeral by default | The goal or proof of value |
+| **Canon** | Curated truths earned through verification | Wiki or documentation dump |
+| **Attempt** | Bounded execution with evidence captured | Vague "try" or experiment |
+
 ## Documentation
 
-Full ODD documentation is available in `docs/prd-guide-pack.md`, including:
+Full ODD documentation is available in `docs/prd-guide-pack.md` (v1.4.1), including:
+- Core terminology and document tiers
 - Complete constraints definitions
 - All 14 decision rules with examples
 - Definition of Done requirements

@@ -1,5 +1,5 @@
 ---
-description: Initialize ODD governance in a project with guidance on the framework, maturity levels, and recommended structure
+description: Initialize ODD governance in a project with guidance on the framework, terminology, document tiers, and maturity levels
 ---
 
 # ODD Init
@@ -29,6 +29,41 @@ Explain the foundational pillars:
 5. **Maintainability** - Systems must survive creator turnover
 6. **Antifragile** - Recovery paths are preferred over prevention; failure is assumed
 7. **Scalable** - Growth must be bounded in cost, complexity, and human attention
+
+## Core Terminology
+
+Explain the precise ODD vocabulary - these terms have specific meanings:
+
+| Term | ODD Meaning | NOT This |
+|------|-------------|----------|
+| **Outcome** | A verifiable state of reality that can be demonstrated | A deliverable, artifact, or checkbox |
+| **Evidence** | Observable proof that an outcome occurred (reproducible/recorded) | Explanation, confidence, or assertion |
+| **Artifact** | A byproduct of work (code, docs). Ephemeral by default | The goal or proof of value |
+| **Elevation** | Promoting a verified truth from working memory to Canon | Filing or archiving |
+| **Canon** | Curated truths that have earned permanence through verification | A wiki or documentation dump |
+| **Attempt** | A bounded execution against a defined goal with evidence | A vague "try" or experiment |
+| **Lane** | A parallel track of work with its own lifecycle and evidence | A branch or generic workstream |
+
+### Anti-Patterns in Language
+
+Warn users about these common mistakes:
+- **Confidence as Evidence** - "I'm confident this works" is not evidence
+- **Explanation as Proof** - "Let me explain why this is correct" is not proof
+- **Activity as Progress** - "I worked on this for hours" is not progress
+- **Artifact as Outcome** - "The code is written" is not an outcome
+
+## Document Tiers
+
+Explain the epistemic obligation system:
+
+| Tier | Obligation | Description |
+|------|------------|-------------|
+| **Tier 0** | Scope exclusion | Public-facing, excluded from agent reasoning |
+| **Tier 1** | Foundational | Must absorb fully. Do not contradict. |
+| **Tier 2** | Shared | Should respect by default. Document deviations. |
+| **Tier 3** | Awareness | Reference when relevant. May ignore otherwise. |
+
+**Important**: Tiers describe epistemic obligation, NOT importance. A Tier 3 doc might be critical for today's task while a Tier 1 doc is philosophically foundational but irrelevant.
 
 ## Project Maturity Assessment
 

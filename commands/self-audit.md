@@ -14,6 +14,24 @@ You are helping the user audit their own work against ODD standards. Guide them 
 
 > Builders—human or AI—must audit their own work against stated outcomes, constraints, and evidence. If an item cannot be answered, that is a signal—not a failure.
 
+## Terminology Precision
+
+Use ODD terms precisely during the audit:
+
+| Term | Means | NOT |
+|------|-------|-----|
+| **Outcome** | Verifiable state that can be demonstrated | Feature, artifact, checkbox |
+| **Evidence** | Observable proof (reproducible/recorded) | Confidence, assertion, explanation |
+| **Done** | Evidence exists proving outcome | Ticket closed, code merged |
+| **Works** | Verified under realistic conditions | Passed tests, "looks right" |
+| **Tested** | Stress-tested against failure modes | Happy path confirmed |
+
+**Watch for these anti-patterns**:
+- "I'm confident this works" → Confidence is not evidence
+- "Let me explain why this is correct" → Explanation is not proof
+- "I worked on this for hours" → Activity is not progress
+- "The code is written" → Artifact is not outcome
+
 ## Checklist Process
 
 Walk through these 9 areas one at a time. For each area, ask the user to provide their answer before moving to the next.

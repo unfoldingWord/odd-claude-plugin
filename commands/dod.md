@@ -14,6 +14,22 @@ You are helping the user verify their work against ODD's Definition of Done. Be 
 
 > Work is not complete unless it is verified with evidence. Reasoning alone is insufficient. Assertions like "this should work" or "this is correct" do not count as completion.
 
+## Terminology Precision
+
+Apply ODD definitions strictly:
+
+| Common Term | ODD Meaning | Common Misuse |
+|-------------|-------------|---------------|
+| "Done" | Evidence exists proving outcome | Code merged, ticket closed |
+| "Works" | Verified under realistic conditions | Passed tests, "looks right" |
+| "Documented" | Captured for future governance | Written down somewhere |
+| "Tested" | Stress-tested against failure modes | Happy path confirmed |
+| "Shipped" | Outcome delivered and verifiable | Artifact deployed |
+
+**Evidence** = Observable proof that an outcome occurred. Must be reproducible or recorded. NOT explanation, confidence, or expert assertion.
+
+**Outcome** = A verifiable state of reality that can be demonstrated. NOT a deliverable, artifact, feature, or checkbox.
+
 ## The 5 Requirements
 
 A task is only considered done when ALL of the following are present:
