@@ -1,11 +1,13 @@
 {
   "name": "odd-claude-plugin",
-  "owner": "unfoldingWord",
+  "owner": {
+    "name": "unfoldingWord"
+  },
   "description": "ODD governance framework plugin",
   "plugins": [
     {
       "name": "odd",
-      "source": "."
+      "source": "./"
     }
   ]
 }
